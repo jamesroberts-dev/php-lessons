@@ -38,6 +38,7 @@
     //Data types
     //String
     $name = "This is a string";
+    //Concatenate strings with .
     $str = 'this is also a string';
 
     //Integers
@@ -54,16 +55,16 @@
     $arr = array("James", "Georgie", "Sean");
     echo $arr['1'];
 
-    //Arithmetic Opperators
+    //Arithmetic Operators
     // +    -   /   *    %   **
 
-    //Assignment opperators
+    //Assignment operators
     //  ++  --  +=   -=   and all other arithmetic operands
 
     //If else statement
     $x = 100;
     $y = 50;
-    // Comparison opperators
+    // Comparison operators
     // ==   <   >   != or <>
     // ===      equal and of same type (Strictly equal)
     // ==       will not check data type so "10" == 10 returns true.  NB!
@@ -96,7 +97,80 @@
             break;
     }
 
+
+    //While loops
+    $counter = 0;
+    while ($counter < 10){
+        // Do this and that
+        $counter++;
+    }
+
+    //Do while - does something atleast once, then check condition
+    do{
+        //Do something
+        $counter++;
+    } while ($counter < 20);
+
+
+    //For loop
+    for ($i = 0; $i < 10; $i++){
+        //Do something
+    }
+
+    $nums = array(1, 2, 4, 7, 8);
+    foreach ($nums as $number){
+        echo $number;
+    }
+
+    // User defined functions
+    function newCalc($passedInVar) {
+        return $passedInVar + 5;
+    }
+    echo "<br>";
+    echo newCalc(5);
+    echo newCalc("10");
+    // Typical to have single file with all functions
+    // See "include" tutorial
+
+//=====================================================================
+// SUPER GLOBALS
+
+// $GLOBALS allows acess to out of scope variables
+// Ex:
+    $outOfScope = 99;
+
+    function someFunc() {
+        echo $GLOBALS['outOfScope'];
+    }
+
+    // $_POST and $_GET super globals
+    // Pass data into URL and move to other documents
+    // See form bellow
+
+    //Change the method type in form field
+    //GET passes into URL and still stays visible  ../../?name=value
+    //POST passes into URL and hides data
+
+//  Using these super globals to retrieve the URL data
+    //echo $_GET['name'];
+    //echo $_POST['name'];
+
+
+
+    // SESSION and COOKIE super globals
+    // COOKIE saves user data on client side
+    // SESSION saves user data on server side
+
+
+
 ?>
+
+<!--POST and GET super globals example-->
+<form method="GET">
+    <input type="hidden" name="name" value="value">
+    <button type="submit">Press Me!</button>
+</form>
+
 
 </body>
 
