@@ -14,6 +14,7 @@
         <option value="Sub"> - </option>
         <option value="Mul"> x </option>
         <option value="Div"> / </option>
+        <!--this should be a comment-->
     </select>
     <input type="text" name="num2">
     <button type="submit" name="submit" value="submit">Calculate!</button>

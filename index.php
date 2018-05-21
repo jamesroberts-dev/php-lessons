@@ -1,3 +1,10 @@
+<?php
+// Used to start session on every page of website
+// Needs to be on every page
+
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,6 +89,7 @@
 //    Logical Opperators OR  - AND
         //    ||     &&     xor - only one can be true
 
+
     // Switch statement
     switch ($x){
         case 1:
@@ -160,6 +168,10 @@
     // SESSION and COOKIE super globals
     // COOKIE saves user data on client side
     // SESSION saves user data on server side
+    setcookie("name", "James", time() + 86400);
+    // Destroy all cookie by setting their time to: time() - 1 ~(any negative)
+    $_SESSION['name'] = "James12";
+
 
 
 
