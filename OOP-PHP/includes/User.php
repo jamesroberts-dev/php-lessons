@@ -1,5 +1,5 @@
 <?php
-    class User {
+    class Users {
         public $first;
         public $last;
         public $hairColor;
